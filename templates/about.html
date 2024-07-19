@@ -1,0 +1,52 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+{% block body %}
+   <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I am a skilled Django developer and Python expert, specializing in building robust web applications and scalable, maintainable code. Passionate about continuous learning and innovation.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="{% static 'assets/img/khadka.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Web Devloper</h2>
+            <p class="fst-italic py-3">
+              My expertise lies in delivering scalable solutions and maintaining high-quality code, driven by a passion for continuous improvement and innovation.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>23 Oct 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+977 9869274740</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Old Baneshwor,Kathmandu</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Running</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>renishkhadka0@gmail.com</span></li>
+                   <li><i class="bi bi-chevron-right"></i> <strong>Interest:</strong> <span>AI/ML, djangoDev, pythonDev</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+                I aspire to be a data analyst, driven by a passion for leveraging Python and statistical analysis to extract valuable insights from intricate data.My enthusiasm lies in  crafting data-driven decisions that fuel business growth
+                and foster innovation, as I explore the boundless potential within the filed of data.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+{% endblock body %}

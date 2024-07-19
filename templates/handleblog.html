@@ -1,0 +1,38 @@
+{% extends 'basic.html' %}
+{% block title %}Blog{% endblock title %}
+{% block body %}
+{% load static %}
+<!-- Services Section -->
+<section id="services" class="services section py-5">
+
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5" data-aos="fade-up">
+    <h2>Welcome to My Blog</h2>
+    <p class="text-muted">Read the latest posts and updates</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+      {% for post in posts reversed %}
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="position-relative">
+              <img src="{{ post.image.url }}" class="card-img-top" alt="No-Image" style="height: 200px; object-fit: cover;">
+              <div class="position-absolute top-0 start-0 m-3">
+                <span class="badge bg-primary">{{ post.timestamp|date:"d M, Y" }}</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title"><a href="" class="stretched-link text-dark">{{ post.title }}</a></h4>
+              <p class="card-text">{{ post.description|truncatewords:20 }}</p>
+              <div class="mt-auto">
+                <small class="text-muted">Posted by: <b>{{ post.author }}</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- /Services Section -->
+{% endblock body %}
